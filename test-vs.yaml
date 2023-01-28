@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: test-virtualservice
+  namespace: test-namespace
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - test-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: test-svc
+        port:
+          number: 80
