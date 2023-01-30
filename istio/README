@@ -5,3 +5,7 @@
 2.2. Или при помощи istioctl - https://istio.io/latest/docs/setup/install/istioctl/
 3. Загрузить yaml файлы в minikube
 4. Открыть доступ к istio-ingress - https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/
+
+
+
+настроить namespace на работу с istio - kubectl label namespace {{namespace}} istio-injection=enabled
