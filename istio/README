@@ -1,5 +1,7 @@
 Настройка Istio
-1. Установить istioctl -
+1. Установить istioctl 
+1.1. Можно скачать файл - https://istio.io/latest/docs/setup/getting-started/#download
+1.2. Или при помощи istioctl
 2. Установка istio - https://istio.io/latest/docs/setup/install/istioctl/
 3. Загрузить yaml файлы
 4. Открыть доступ к istio-ingress - https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/
