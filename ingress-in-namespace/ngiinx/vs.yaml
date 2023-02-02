@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: test-nginx-proxy
+  namespace: test-namespace
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - test-nginx-proxy-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: test-nginx-proxy
+        port:
+          number: 8080

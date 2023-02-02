@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-test-namespace
+  namespace: test-namespace
+spec:
+  selector:
+    app: istio
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8001
+
