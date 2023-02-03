@@ -11,6 +11,6 @@ spec:
   http:
     - route:
         - destination:
-            host: ingress-test-namespace
+            host: ingress-test-namespace.test-namespace.svc.cluster.local
             port:
               number: 8080
