@@ -1,16 +1,16 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: ingressgateway
-  namespace: istio-system
+  name: namespace-test-namespace
+  namespace: test-namespace
 spec:
   hosts:
   - "*"
   gateways:
-  - ingressgateway
+  - namespace-test-namespace
   http:
     - route:
         - destination:
-            host: namespace-test-namespace.test-namespace.svc.cluster.local
+            host: test-nginx-proxy
             port:
               number: 8080
