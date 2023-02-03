@@ -1,14 +1,14 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: namespace-test-namespace
+  name: egress-test-namespace
   namespace: test-namespace
 spec:
   selector:
-    istio: namespace-test-namespace
+    istio: istio-egress
   servers:
   - port:
-      number: 8001
+      number: 9001
       name: http
       protocol: HTTP
     hosts:

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: namespace-test-namespace
+  name: ingress-test-namespace
   namespace: test-namespace
 spec:
   selector:
-    app: istio
+    app: istio-ingress
   ports:
     - name: http
       protocol: TCP

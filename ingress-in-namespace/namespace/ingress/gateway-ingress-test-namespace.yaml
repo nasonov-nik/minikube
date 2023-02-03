@@ -1,11 +1,11 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: namespace-test-namespace
+  name: ingress-test-namespace
   namespace: test-namespace
 spec:
   selector:
-    istio: namespace-test-namespace
+    istio: ingress-test-namespace
   servers:
   - port:
       number: 8001

@@ -7,10 +7,10 @@ spec:
   hosts:
   - "*"
   gateways:
-  - namespace-test-namespace
+  - egress-test-namespace
   http:
     - route:
         - destination:
-            host: test-nginx-proxy
+            host: yandex.call
             port:
-              number: 8080
+              number: 80

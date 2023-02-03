@@ -1,13 +1,13 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: namespace-test-namespace
+  name: ingress-test-namespace
   namespace: test-namespace
 spec:
   hosts:
   - "*"
   gateways:
-  - namespace-test-namespace
+  - ingress-test-namespace
   http:
     - route:
         - destination:
