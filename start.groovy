@@ -4,8 +4,8 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage {
-            steps('test') {
+        stage('test'){
+            steps {
                 sh 'oc get deployment'
             }
         }
