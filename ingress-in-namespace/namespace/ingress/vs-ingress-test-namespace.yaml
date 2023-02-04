@@ -14,3 +14,11 @@ spec:
             host: test-nginx-proxy
             port:
               number: 8080
+            subset: v1
+          weigth: 90
+        - destination:
+            host: test-nginx-proxy
+            port:
+              number: 8080
+            subset: v2
+          weigth: 10
