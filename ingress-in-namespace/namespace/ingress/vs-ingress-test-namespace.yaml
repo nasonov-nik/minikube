@@ -9,16 +9,26 @@ spec:
   gateways:
   - ingress-test-namespace
   http:
+    - match:
+        - uri:
+            prefix: "/ya"
+      route:
+        - destination:
+            host: test-nginx-proxy
+            port:
+              number: 8080
+            subset: v2
+          weight: 100
     - route:
         - destination:
             host: test-nginx-proxy
             port:
               number: 8080
             subset: v1
-          weigth: 90
+          weigth: 99
         - destination:
             host: test-nginx-proxy
             port:
               number: 8080
             subset: v2
-          weigth: 10
+          weigth: 1
