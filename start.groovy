@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {
-        ansiColor('xterm')
+        skipStagesAfterUnstable()
     }
     stages {
         stage {
