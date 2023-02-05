@@ -8,8 +8,8 @@ pipeline {
             steps {
                 //sh 'kubectl get deployment'
 //                 sh 'pwd'
-                def my_host = sh(script: "ls -l", returnStdout: true)
-                println("host: ${host}")
+                def my_host = sh(script: 'ls -l', returnStdout: true)
+                println("host: ${my_host}")
             }
         }
     }
