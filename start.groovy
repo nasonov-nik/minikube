@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('test'){
             steps {
-                sh 'kubectl get deployment'
+                //sh 'kubectl get deployment'
                 sh 'ls -la'
             }
         }
