@@ -32,6 +32,9 @@ data:
                 root /etc/nginx;
                 index  html.html;
             }
+            location /ya {
+              proxy_pass http://egress-test-namespace
+            }
         }
 
 
