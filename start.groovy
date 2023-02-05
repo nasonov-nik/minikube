@@ -8,6 +8,8 @@ pipeline {
             steps {
                 //sh 'kubectl get deployment'
                 sh 'ls -la'
+                sh 'pwd'
+                script(sh'hostname -' ,returnStdout: true)
             }
         }
     }
