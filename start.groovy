@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('test'){
             steps {
-                def my_host String
+                def outputCommand String
                 //sh 'kubectl get deployment'
                 sh 'pwd'
                 my_host = sh(script: 'pwd', returnStdout: true)
