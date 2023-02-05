@@ -9,7 +9,7 @@ pipeline {
                 //sh 'kubectl get deployment'
                 sh 'ls -la'
                 sh 'pwd'
-                script(sh'hostname -' ,returnStdout: true)
+                sh (script: 'hostname -i',returnStdout: true)
             }
         }
     }
